@@ -4,7 +4,7 @@ INSERT INTO keyspace1.user ((user_id,user_name,age,eyes,registr_date,parametrs)
   VALUES ( 845C220-E233-486F-BCA6-4E979A5453EC, {"firstname":'Dasha',"surname":'Ivanova',"nickname":'IDasha'},'17','green', toTimestamp(now()),{"hair":''blond',"height":'170'});
 INSERT INTO keyspace1.user ((user_id,user_name,age,eyes,registr_date,parametrs) 
   VALUES ( 5FECA1EB-09C3-47A0-920E-07182604F168, {"firstname":'Lili',"surname":'Orlova',"nickname":'LilO'},'23','grey', toTimestamp(now()),{"hair":''red',"height":'165'});
-  
+ 
 	SELECT json * from  keyspace1.user;
 
 
