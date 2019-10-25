@@ -16,12 +16,12 @@ class ClothesViewModel(FlaskForm):
 
     ])
 
-    lowerwear= IntegerField("lowerwear: ", [
+    lowerwear= StringField("lowerwear: ", [
         validators.DataRequired("Please enter your lowerwear.")
 
     ])
 	
-	shoes= IntegerField("shoes: ", [
+	shoes= StringField("shoes: ", [
         validators.DataRequired("Please enter your shoes.")
 
     ])
