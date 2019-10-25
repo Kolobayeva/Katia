@@ -1,37 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>LABORATORY2</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+
+    <title>KateProj</title>
 </head>
+
 <body>
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="#" class="brand-logo">Selection of clothes</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="main.html">Home</a></li>
+                <li><a href="Users.html">Users</a></li>
+				<li><a href="Events.html">Events</a></li>
+				<li><a href="Options.html">Options</a></li>
+				<li><a href="Dashboard.html">Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
+     <div class="container">
+        <div class="card">
+            <div class="row">
+                <form class="col s12">
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
-    <div class="navbar-header">
-        <a class="navbar-brand" href="https://github.com/Kolobayeva/Katia"> Kolobayeva Katia </a>
-        <!-- Посилання на репозиторій з кодом !-->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="name" type="text" class="validate">
+                            <label for="name">Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="age" type="number" class="validate">
+                            <label for="age">Age</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <select>
+                                <option value="0">Green</option>
+                                <option value="1">Blue</option>
+                                <option value="2">Grey</option>
+                                <option value="3">Brown</option>
+                            </select>
+                            <label>Eyes</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="Hair" type="text" class="validate">
+                            <label for="Hair">Hair</label>
+                        </div>
+                    </div>
+					 <div class="row">
+                        <div class="input-field col s12">
+                            <input id="Height" type="number" class="validate">
+                            <label for="Height">Height</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="nameEvent" type="text" class="validate">
+                            <label for="nameEvent">Event</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" class="datepicker">
+                            <label for="dateEvent">Date</label>
+                        </div>
+                    </div>
+                    <div>
+                        <form action="#">
+                            <p>
+                                <label>
+                                    <input name="group1" type="radio" checked />
+                                    <span>Winter</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input name="group1" type="radio" />
+                                    <span>Spring</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="with-gap" name="group1" type="radio" />
+                                    <span>Summer</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input name="group1" type="radio" />
+                                    <span>Autmn</span>
+                                </label>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="temperature" type="number" class="validate" maxlength=3>
+                            <label for="temperature">Temperature</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <a href="#!" class="btn right">Show</a>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
     </div>
-
-
-    <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="/Users">Users</a></li>
-        <li class="nav-item"><a class="nav-link" href="/Events">Events</a></li>
-        <li class="nav-item"><a class="nav-link" href="/Options">Options</a></li>
-        <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
-    </ul>
-
-</nav>
-
-<div class="container">
-
-    {% block content %}{% endblock %}
-
-</div>
-
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
 </html>
