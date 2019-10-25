@@ -1,0 +1,18 @@
+    
+{% extends 'main.html' %}
+
+{% block content %}
+<form method="post">
+    {{form.hidden_tag()}}
+
+    <div class="form-group">
+        {{form.temperature.label}}
+        {{form.temperature(class_="form-control")}}
+    </div>
+    <div class="form-group">
+        {{form.Events.label}}
+        {{form.Events(class_="form-control")}}
+    </div>
+    {{form.Submit(class_="btn btn-success")}}
+</form>
+{% endblock %}
