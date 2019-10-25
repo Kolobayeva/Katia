@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div id="content__page__header" class="d-flex justify-content-between align-items-center">
+    <span>options</span>
+    <a href="{{url_for('new_options')}}" class="btn btn-primary">Create new temperature for options</a>
+</div>
+<div id="content__page__body">
+    <table class="table">
+        <thead>
+        <tr>
+            <th style="width: 35%">temperature</th>
+            <th style="width: 35%">options</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for options in options: %}
+        <tr>
+            <td>{{options.temperature}}</td>
+            <td>{{options.options.options}}</td>
+            <td class="d-flex justify-content-end">
+                <a href="{{url_for('update_optionst', uuid=answeroptions.Id)}}" class="btn btn-success">Edit</a>
+                <form method="post" action="{{url_for('delete_optionst', uuid=options.Id)}}" class="delete-record">
+                    <input type="submit" value="Delete" class="btn btn-danger"/>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
