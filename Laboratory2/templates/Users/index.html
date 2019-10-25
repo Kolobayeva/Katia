@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div id="content__page__header" class="d-flex justify-content-between align-items-center">
+    <span>Users</span>
+    <a href="{{url_for('new_User')}}" class="btn btn-primary">Make new User</a>
+</div>
+<div id="content__page__body">
+    <table class="table">
+        <thead>
+        <tr>
+            <th style="width: 45%">User_events</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for User in Users: %}
+        <tr>
+            <td>{{User.User_events}}</td>
+            <td class="d-flex justify-content-end">
+                <a href="{{url_for('update_User', uuid=User.User_id)}}" class="btn btn-success">Edit</a>
+                <form method="post" action="{{url_for('delete_User', uuid=User.User_id)}}" class="delete-record">
+                    <input type="submit" value="Delete" class="btn btn-danger"/>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
