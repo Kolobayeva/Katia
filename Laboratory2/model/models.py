@@ -53,3 +53,4 @@ class Options(db.Model):
     def map_to_form(self, form):
         self.season = form.season.data
         self.EventIdFk = form.Event.data
+
